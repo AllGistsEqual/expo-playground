@@ -5,15 +5,20 @@ import {
     StyleSheet,
 } from 'react-native'
 
-const Box = ({ children }) => {
+const Box = ({ children, setup }) => {
+    const {
+        width,
+        height,
+        margin,
+    } = setup
     const styles = StyleSheet.create({
         boxOuter: {
-            width: 240,
-            height: 120,
+            width: width || 240,
+            height: height || 120,
+            margin: margin || 10,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            margin: 10,
             backgroundColor: '#fff',
             borderRadius: 4,
             borderWidth: 0.5,
@@ -28,12 +33,20 @@ const Box = ({ children }) => {
     )
 }
 
+const defaultSetup = {
+    width: 240,
+    height: 120,
+    margin: 10,
+}
+
 Box.defaultProps = {
     children: undefined,
+    setup: defaultSetup,
 }
 
 Box.propTypes = {
     children: PropTypes.node,
+    setup: PropTypes.object,
 }
 
 export default Box
