@@ -2,6 +2,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import AppLoadingScreen from '../scenes/AppLoadingScreen'
 import SceneHome from '../scenes/SceneHome'
+import ScenePlayground from '../scenes/ScenePlayground'
 import SceneSettings from '../scenes/SceneSettings'
 import SceneDemoBoxSimple from '../scenes/SceneDemoBoxSimple'
 import SceneDemoBox1 from '../scenes/SceneDemoBox1'
@@ -12,6 +13,7 @@ const DemoStack = createStackNavigator(
     {
         Home: SceneHome,
         Settings: SceneSettings,
+        Playground: ScenePlayground,
         DemoBoxSimple: SceneDemoBoxSimple,
         DemoBox1: SceneDemoBox1,
         DemoBox2: SceneDemoBox2,
@@ -19,7 +21,7 @@ const DemoStack = createStackNavigator(
     },
     {
         headerMode: 'none',
-        initialRouteName: 'Home',
+        initialRouteName: 'Playground',
     }
 )
 
