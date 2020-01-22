@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, ImageBackground } from 'react-native'
 import PropTypes from 'prop-types'
 
-import boxImage from '../../assets/sketch_box_01.png'
+import boxImage from '../../assets/demo/sketch_box_01.png'
 
 const BoxSimple = ({ children }) => (
     <ImageBackground

@@ -8,8 +8,11 @@ const styles = StyleSheet.create({
         height: '100%',
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
         backgroundColor: '#000',
+    },
+    headerPanel: {
+        flex: 1,
+        alignItems: 'center',
     },
 })
 

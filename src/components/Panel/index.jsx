@@ -8,6 +8,19 @@ import {
 
 const Panel = ({ title, style, children }) => {
     const { OS } = Platform
+    const baseStyle = {
+        shadowColor: '#000000',
+        shadowOffsetWidth: 3,
+        shadowOffsetHeight: 3,
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+        backgroundColor: '#ffffff',
+        padding: 5,
+        margin: 10,
+        borderRadius: 3,
+        width: 300,
+        elevation: 3,
+    }
     const {
         width,
         margin,
@@ -19,7 +32,8 @@ const Panel = ({ title, style, children }) => {
         shadowOffsetWidth,
         elevation,
         backgroundColor,
-    } = style
+    } = baseStyle
+
     const container = {
         shadowOffset: {
             width: Platform.OS === 'ios' ? shadowOffsetWidth : 0,
@@ -32,17 +46,17 @@ const Panel = ({ title, style, children }) => {
         shadowRadius,
         elevation: OS === 'android' ? elevation : undefined,
     }
+    const content = {
+        backgroundColor,
+        overflow: 'hidden',
+        padding,
+        width,
+        borderRadius,
+    }
 
     return (
         <View style={container}>
-            <View style={{
-                backgroundColor,
-                overflow: 'hidden',
-                padding,
-                width,
-                borderRadius,
-            }}
-            >
+            <View style={content}>
                 <Text>{ title }</Text>
                 { children }
             </View>
@@ -51,23 +65,12 @@ const Panel = ({ title, style, children }) => {
 }
 
 Panel.defaultProps = {
-    style: {
-        shadowColor: '#000000',
-        shadowOffsetWidth: 3,
-        shadowOffsetHeight: 3,
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        backgroundColor: '#ffffff',
-        padding: 5,
-        margin: 10,
-        borderRadius: 3,
-        width: 300,
-        elevation: 3,
-    },
+    title: undefined,
+    style: undefined,
     children: (<Text>Lorem Ipsum</Text>),
 }
 Panel.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
 }

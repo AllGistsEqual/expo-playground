@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 
-import buttonImage from '../../assets/sketch_button_01.png'
+import buttonImage from '../../assets/demo/sketch_button_01.png'
 
 const ButtonTouchableOpacity = ({ children }) => (
     <TouchableOpacity>

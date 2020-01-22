@@ -1,21 +1,16 @@
 import React from 'react'
-import { ImageBackground, Text } from 'react-native'
-import { blueprint } from '../../assets'
-import NavigationButton from '../components/NavigationButton'
+import { Text } from 'react-native'
 import Panel from '../components/Panel'
-import styles from '../styles'
+import DemoPage from '../components/DemoPage'
 
 const SceneSettings = () => (
-    <ImageBackground source={blueprint} resizeMode="repeat" style={styles.container}>
-
+    <DemoPage>
         <Panel title="Settings Page">
             <Text>
                 Lorem Ipsum
             </Text>
-            <NavigationButton title="<< Back to home" target="Home" />
         </Panel>
-
-    </ImageBackground>
+    </DemoPage>
 )
 
 export default SceneSettings
