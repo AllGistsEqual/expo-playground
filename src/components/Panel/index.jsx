@@ -6,7 +6,7 @@ import {
     Platform,
 } from 'react-native'
 
-const Panel = ({ title, style, children }) => {
+const Panel = ({ title, children }) => {
     const { OS } = Platform
     const baseStyle = {
         shadowColor: '#000000',
