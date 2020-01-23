@@ -66,12 +66,10 @@ const Panel = ({ title, children }) => {
 
 Panel.defaultProps = {
     title: undefined,
-    style: undefined,
     children: (<Text>Lorem Ipsum</Text>),
 }
 Panel.propTypes = {
     title: PropTypes.string,
-    style: PropTypes.object,
     children: PropTypes.node,
 }
 
