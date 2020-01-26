@@ -11,12 +11,12 @@ const image = {
     N: {
         id: 'N',
         source: demoN,
-        height: 37,
+        height: 35,
     },
     S: {
         id: 'S',
         source: demoS,
-        height: 37,
+        height: 35,
     },
     E: {
         id: 'E',
@@ -32,27 +32,26 @@ const image = {
         id: 'NE',
         source: demoNE,
         width: 35,
-        height: 37,
+        height: 35,
     },
     NW: {
         id: 'NW',
         source: demoNW,
         width: 35,
-        height: 37,
+        height: 35,
     },
     SE: {
         id: 'SE',
         source: demoSE,
         width: 35,
-        height: 37,
+        height: 35,
     },
     SW: {
         id: 'SW',
         source: demoSW,
         width: 35,
-        height: 37,
+        height: 35,
     },
 }
-
 
 export default image

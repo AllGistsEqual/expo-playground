@@ -2,11 +2,63 @@ import React from 'react'
 import { Text } from 'react-native'
 import DemoPage from '../components/DemoPage'
 import Box from '../components/Box'
+import demoN from '../../assets/demo/demoFrameFubar/demo_frame_02_N.png'
+import demoNE from '../../assets/demo/demoFrameFubar/demo_frame_02_NE.png'
+import demoNW from '../../assets/demo/demoFrameFubar/demo_frame_02_NW.png'
+import demoE from '../../assets/demo/demoFrameFubar/demo_frame_02_E.png'
+import demoW from '../../assets/demo/demoFrameFubar/demo_frame_02_W.png'
+import demoS from '../../assets/demo/demoFrameFubar/demo_frame_02_S.png'
+import demoSE from '../../assets/demo/demoFrameFubar/demo_frame_02_SE.png'
+import demoSW from '../../assets/demo/demoFrameFubar/demo_frame_02_SW.png'
 
 const setupSimple = {
     width: 320,
     height: 320,
     margin: 20,
+    N: {
+        id: 'N',
+        source: demoN,
+        height: 35,
+    },
+    S: {
+        id: 'S',
+        source: demoS,
+        height: 35,
+    },
+    E: {
+        id: 'E',
+        source: demoE,
+        width: 35,
+    },
+    W: {
+        id: 'W',
+        source: demoW,
+        width: 35,
+    },
+    NE: {
+        id: 'NE',
+        source: demoNE,
+        width: 35,
+        height: 35,
+    },
+    NW: {
+        id: 'NW',
+        source: demoNW,
+        width: 35,
+        height: 35,
+    },
+    SE: {
+        id: 'SE',
+        source: demoSE,
+        width: 35,
+        height: 35,
+    },
+    SW: {
+        id: 'SW',
+        source: demoSW,
+        width: 35,
+        height: 35,
+    },
 }
 const setupOffset = {
     width: 280,
@@ -15,43 +67,47 @@ const setupOffset = {
     backgroundColor: '#ddd',
     N: {
         id: 'N',
-        height: 20,
-        top: 10,
+        source: demoN,
+        height: 35,
     },
     S: {
         id: 'S',
-        height: 20,
-        bottom: 10,
+        source: demoS,
+        height: 35,
     },
     E: {
         id: 'E',
-        width: 20,
-        right: 10,
+        source: demoE,
+        width: 35,
     },
     W: {
         id: 'W',
-        width: 20,
-        left: 10,
+        source: demoW,
+        width: 35,
     },
     NE: {
         id: 'NE',
-        width: 40,
-        height: 40,
+        source: demoNE,
+        width: 35,
+        height: 35,
     },
     NW: {
         id: 'NW',
-        width: 40,
-        height: 40,
+        source: demoNW,
+        width: 35,
+        height: 35,
     },
     SE: {
         id: 'SE',
-        width: 40,
-        height: 40,
+        source: demoSE,
+        width: 35,
+        height: 35,
     },
     SW: {
         id: 'SW',
-        width: 40,
-        height: 40,
+        source: demoSW,
+        width: 35,
+        height: 35,
     },
 }
 

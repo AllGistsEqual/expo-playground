@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
     View,
-    Text,
     StyleSheet,
+    ImageBackground,
 } from 'react-native'
 
 const Box = ({ children, setup }) => {
@@ -28,10 +28,6 @@ const Box = ({ children, setup }) => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: '#ccc',
-            borderRadius: 4,
-            borderWidth: 0.5,
-            borderColor: '#ff7100',
         },
     })
     const styles = StyleSheet.create({
@@ -116,12 +112,11 @@ const Box = ({ children, setup }) => {
             <View style={styles.background} />
             {
                 [N, E, S, W, NE, NW, SE, SW].map((loc) => (
-                    <View
+                    <ImageBackground
+                        source={loc.source}
                         key={loc.id}
                         style={styles[`pos${loc.id}`]}
-                    >
-                        <Text>{loc.id}</Text>
-                    </View>
+                    />
                 ))
             }
             {children}
