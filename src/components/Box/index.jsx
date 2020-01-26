@@ -11,6 +11,8 @@ const Box = ({ children, setup }) => {
         width,
         height,
         margin,
+        backgroundColor = '#fff',
+        backgroundOffset = {},
         N = { id: 'N' },
         S = { id: 'S' },
         E = { id: 'E' },
@@ -40,10 +42,14 @@ const Box = ({ children, setup }) => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: '#fff',
-            borderRadius: 4,
-            borderWidth: 0.5,
-            borderColor: '#000',
+        },
+        background: {
+            backgroundColor: backgroundColor || undefined,
+            position: 'absolute',
+            top: backgroundOffset.top ?? 0,
+            right: backgroundOffset.right ?? 0,
+            bottom: backgroundOffset.bottom ?? 0,
+            left: backgroundOffset.left ?? 0,
         },
         posN: {
             ...base.pos,
@@ -107,6 +113,7 @@ const Box = ({ children, setup }) => {
 
     return (
         <View style={styles.boxOuter}>
+            <View style={styles.background} />
             {
                 [N, E, S, W, NE, NW, SE, SW].map((loc) => (
                     <View

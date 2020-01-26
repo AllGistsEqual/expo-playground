@@ -12,6 +12,7 @@ const setupOffset = {
     width: 280,
     height: 160,
     margin: 0,
+    backgroundColor: '#ddd',
     N: {
         id: 'N',
         height: 20,
