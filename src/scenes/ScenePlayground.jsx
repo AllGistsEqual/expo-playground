@@ -2,19 +2,21 @@ import React from 'react'
 import { Text } from 'react-native'
 import DemoPage from '../components/DemoPage'
 import Box from '../components/Box'
-import demoFrame from '../../assets/demo/demoFrameFubar'
+import demoFrameFubar from '../../assets/demo/demoFrameFubar'
+import demoFrameComic from '../../assets/demo/demoFrameComic'
 
 const setupSimple = {
-    ...demoFrame,
+    ...demoFrameFubar,
     width: 320,
     height: 320,
     margin: 20,
 }
 const setupOffset = {
-    ...demoFrame,
+    ...demoFrameComic,
     width: 280,
     height: 160,
     margin: 0,
+    scale: 0.2,
     backgroundColor: '#ddd',
 }
 
