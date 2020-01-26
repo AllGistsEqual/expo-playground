@@ -46,10 +46,10 @@ const Box = ({ children, setup }) => {
         background: {
             backgroundColor: backgroundColor || undefined,
             position: 'absolute',
-            top: backgroundOffset.top ?? 0,
-            right: backgroundOffset.right ?? 0,
-            bottom: backgroundOffset.bottom ?? 0,
-            left: backgroundOffset.left ?? 0,
+            top: backgroundOffset.top ?? N.height ?? 0,
+            right: backgroundOffset.right ?? E.width ?? 0,
+            bottom: backgroundOffset.bottom ?? S.height ?? 0,
+            left: backgroundOffset.left ?? W.width ?? 0,
         },
         posN: {
             ...base.pos,
