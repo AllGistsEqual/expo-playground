@@ -1,22 +1,20 @@
 import React from 'react'
 import { Text } from 'react-native'
-import DemoPage from '../components/DemoPage'
-import Box from '../demo/BoxOld'
-import demoImage from '../../assets/demo/demoFrameComic'
+import DemoPage from '../../components/DemoPage'
+import Box from '../../demo/BoxOld'
+import testImage from '../../../assets/demo/demoFrameFubar'
 
-const setup3 = {
-    ...demoImage,
+const setup1 = {
+    ...testImage,
     width: 360,
     height: 120,
-    scale: 0.21,
     backgroundColor: 'magenta',
 }
-const setup4 = {
-    ...demoImage,
+const setup2 = {
+    ...testImage,
     width: 240,
     height: 440,
     margin: 10,
-    scale: 0.3,
     backgroundColor: 'green',
     padding: {
         top: 20,
@@ -25,14 +23,13 @@ const setup4 = {
         left: 20,
     },
 }
-
 const SceneHome = () => (
     <DemoPage>
-        <Box setup={setup3}>
+        <Box setup={setup1}>
             <Text>Box Demo</Text>
         </Box>
 
-        <Box setup={setup4}>
+        <Box setup={setup2}>
             <Text>Box Demo</Text>
         </Box>
     </DemoPage>

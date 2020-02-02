@@ -14,8 +14,8 @@ const setupSimple = {
 const setupOffset = {
     ...demoFrameWarning,
     width: 280,
-    height: 160,
-    margin: 0,
+    height: 460,
+    margin: 5,
     scale: 0.6,
     backgroundColor: '#ddd',
 }

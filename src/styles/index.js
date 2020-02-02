@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#000',
     },
+    constrainer: {
+        flexGrow: 1,
+        alignItems: 'center',
+    },
     headerPanel: {
         flex: 1,
         alignItems: 'center',

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text } from 'react-native'
-import DemoPage from '../components/DemoPage'
-import ButtonTouchableOpacity from '../demo/ButtonTouchableOpacity'
-import BoxImageBackground from '../demo/BoxImageBackground'
-import BoxSimple from '../demo/BoxSimple'
+import DemoPage from '../../components/DemoPage'
+import ButtonTouchableOpacity from '../../demo/ButtonTouchableOpacity'
+import BoxImageBackground from '../../demo/BoxImageBackground'
+import BoxSimple from '../../demo/BoxSimple'
 
 const SceneHome = () => (
     <DemoPage>
