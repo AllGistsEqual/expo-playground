@@ -3,5 +3,4 @@ import applicationReducer from './application.reducer'
 
 export default combineReducers({
     application: applicationReducer,
-    applications: applicationReducer,
 })
