@@ -1,16 +1,16 @@
 import React from 'react'
 import { Text } from 'react-native'
 import Panel from '../components/Panel'
-import DemoPage from '../components/DemoPage'
+import DefaultPage from '../components/DefaultPage'
 
 const SceneSettings = () => (
-    <DemoPage>
+    <DefaultPage>
         <Panel title="Settings Page">
             <Text>
                 Lorem Ipsum
             </Text>
         </Panel>
-    </DemoPage>
+    </DefaultPage>
 )
 
 export default SceneSettings

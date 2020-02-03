@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, ImageBackground } from 'react-native'
-import DemoPage from '../../components/DemoPage'
-import Box from '../../demo/BoxOld'
-import warningImage from '../../../assets/demo/demoFrameWarning'
-import warningSign from '../../../assets/demo/demoFrameWarning/demo_frame_03_decoration_N.png'
+import DemoPage from '../../src/components/DemoPage'
+import Box from '../components/BoxOld'
+import warningImage from '../../assets/demo/demoFrameWarning'
+import warningSign from '../../assets/demo/demoFrameWarning/demo_frame_03_decoration_N.png'
 
 const setup5 = {
     ...warningImage,

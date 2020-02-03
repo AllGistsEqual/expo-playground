@@ -53,11 +53,17 @@ const Panel = ({ title, children }) => {
         width,
         borderRadius,
     }
+    const headline = {
+        fontWeight: 'bold',
+        marginTop: 5,
+        marginBottom: 15,
+        textAlign: 'center',
+    }
 
     return (
         <View style={container}>
             <View style={content}>
-                <Text>{ title }</Text>
+                { title ? (<Text style={headline}>{ title }</Text>) : undefined }
                 { children }
             </View>
         </View>

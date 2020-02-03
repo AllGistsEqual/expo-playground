@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { StatusBar } from 'react-native'
 import configureStore from './src/redux/store'
 import { initialiseApplication } from './src/redux/actions/application.actions'
-import Navigation from './src/routing/Navigation'
+import SceneHome from './src/scenes/SceneHome'
 
 const store = configureStore()
 store.dispatch(initialiseApplication())
@@ -12,7 +12,7 @@ export default function App() {
     return (
         <Provider store={store}>
             <StatusBar hidden />
-            <Navigation />
+            <SceneHome />
         </Provider>
     )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text } from 'react-native'
-import DemoPage from '../../components/DemoPage'
-import Box from '../../demo/BoxOld'
-import testImage from '../../../assets/demo/demoFrameFubar'
+import DemoPage from '../../src/components/DemoPage'
+import Box from '../components/BoxOld'
+import testImage from '../../assets/demo/demoFrameFubar'
 
 const setup1 = {
     ...testImage,

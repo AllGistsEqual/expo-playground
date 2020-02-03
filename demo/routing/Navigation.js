@@ -1,13 +1,13 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import AppLoadingScreen from '../scenes/AppLoadingScreen'
-import SceneHome from '../scenes/SceneHome'
-import ScenePlayground from '../scenes/ScenePlayground'
-import SceneSettings from '../scenes/SceneSettings'
-import SceneDemoBoxSimple from '../scenes/archive/SceneDemoBoxSimple'
-import SceneDemoBox1 from '../scenes/archive/SceneDemoBox1'
-import SceneDemoBox2 from '../scenes/archive/SceneDemoBox2'
-import SceneDemoBox3 from '../scenes/archive/SceneDemoBox3'
+import AppLoadingScreen from '../../src/scenes/AppLoadingScreen'
+import SceneHome from '../scenes/SceneDemoHome'
+import ScenePlayground from '../../src/scenes/ScenePlayground'
+import SceneSettings from '../../src/scenes/SceneSettings'
+import SceneDemoBoxSimple from '../scenes/SceneDemoBoxSimple'
+import SceneDemoBox1 from '../scenes/SceneDemoBox1'
+import SceneDemoBox2 from '../scenes/SceneDemoBox2'
+import SceneDemoBox3 from '../scenes/SceneDemoBox3'
 
 const DemoStack = createStackNavigator(
     {
