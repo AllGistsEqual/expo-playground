@@ -35,6 +35,30 @@ const styles = StyleSheet.create({
         flex: 1,
         fontWeight: 'bold',
     },
+    page: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    titleBox: {
+        width: '100%',
+        height: '50%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    contentBox: {
+        width: '100%',
+        height: '45%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    footer: {
+        width: '100%',
+        height: '10%',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+    },
 })
 
 export default styles
