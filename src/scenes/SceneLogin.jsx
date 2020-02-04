@@ -2,11 +2,14 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, CheckBox, Input } from 'react-native-elements'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { userLogin } from '../redux/actions/user.actions'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 
-const SceneLogin = () => (
+const SceneLogin = ({ login, storedUserName }) => (
     <DefaultPage isHome>
         <Panel>
             <View style={styles.headerPanel}>
@@ -41,10 +44,29 @@ const SceneLogin = () => (
                 />
                 <Button
                     title="LOGIN"
+                    onPress={() => login('???')}
                 />
+                <Text>{storedUserName}</Text>
             </View>
         </Panel>
     </DefaultPage>
 )
 
-export default SceneLogin
+const mapStateToProps = (state) => ({
+    storedUserName: state.user.name,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    login: (name) => dispatch(userLogin({ name })),
+})
+
+SceneLogin.defaultProps = {
+    storedUserName: '',
+}
+
+SceneLogin.propTypes = {
+    login: PropTypes.func.isRequired,
+    storedUserName: PropTypes.string,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SceneLogin)
