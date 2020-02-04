@@ -13,48 +13,48 @@ const SceneLogin = ({ login, storedUserName }) => {
     const [userName, setUserName] = useState('')
 
     return (
-    <DefaultPage isHome>
-        <Panel>
-            <View style={styles.headerPanel}>
-                <Text style={styles.headline}>LOGIN</Text>
-            </View>
-            <View style={styles.headerPanel}>
-                <Input
-                    placeholder="USER NAME OR EMAIL"
-                    onChangeText={(text) => setUserName(text)}
-                    value={userName}
-                    leftIcon={(
-                        <Icon
-                            name="user"
-                            size={24}
-                            color="black"
-                        />
-                    )}
-                />
+        <DefaultPage isHome>
+            <Panel>
+                <View style={styles.headerPanel}>
+                    <Text style={styles.headline}>LOGIN</Text>
+                </View>
+                <View style={styles.headerPanel}>
+                    <Input
+                        placeholder="USER NAME OR EMAIL"
+                        onChangeText={(text) => setUserName(text)}
+                        value={userName}
+                        leftIcon={(
+                            <Icon
+                                name="user"
+                                size={24}
+                                color="black"
+                            />
+                        )}
+                    />
 
-                <Input
-                    placeholder="PASSWORD"
-                    leftIcon={(
-                        <Icon
-                            name="lock"
-                            size={24}
-                            color="black"
-                        />
-                    )}
-                />
-                <CheckBox
-                    title="Keep me signed in"
-                    name="ALWAYS"
-                    checked={false}
-                />
-                <Button
-                    title="LOGIN"
-                    onPress={() => login(userName)}
-                />
-                <Text>{storedUserName}</Text>
-            </View>
-        </Panel>
-    </DefaultPage>
+                    <Input
+                        placeholder="PASSWORD"
+                        leftIcon={(
+                            <Icon
+                                name="lock"
+                                size={24}
+                                color="black"
+                            />
+                        )}
+                    />
+                    <CheckBox
+                        title="Keep me signed in"
+                        name="ALWAYS"
+                        checked={false}
+                    />
+                    <Button
+                        title="LOGIN"
+                        onPress={() => login(userName)}
+                    />
+                    <Text>{storedUserName}</Text>
+                </View>
+            </Panel>
+        </DefaultPage>
     )
 }
 
