@@ -12,23 +12,23 @@ const SceneLogOut = ({ navigation, logout }) => {
     useEffect(() => { logout() }, [logout])
 
     return (
-    <DefaultPage isHome>
-        <Panel>
-            <View style={styles.headerPanel}>
-                <Text style={styles.headline}>LOGGED OUT!</Text>
-            </View>
-            <View style={styles.headerPanel}>
-                <Text>
-                    We are sad to see you go but should you want to return, we&apos;re gonna leave
-                    a light on for you, UK.
-                </Text>
-                <Button
-                    title="SIGN ME IN AGAIN"
-                    onPress={() => navigation.navigate('Login')}
-                />
-            </View>
-        </Panel>
-    </DefaultPage>
+        <DefaultPage isHome>
+            <Panel>
+                <View style={styles.headerPanel}>
+                    <Text style={styles.headline}>LOGGED OUT!</Text>
+                </View>
+                <View style={styles.headerPanel}>
+                    <Text>
+                        We are sad to see you go but should you want to return, we&apos;re gonna leave
+                        a light on for you, UK.
+                    </Text>
+                    <Button
+                        title="SIGN ME IN AGAIN"
+                        onPress={() => navigation.navigate('Login')}
+                    />
+                </View>
+            </Panel>
+        </DefaultPage>
     )
 }
 
