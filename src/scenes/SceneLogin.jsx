@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, CheckBox, Input } from 'react-native-elements'
@@ -9,8 +9,15 @@ import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 
-const SceneLogin = ({ login, storedUserName }) => {
+const SceneLogin = ({ login, storedUserName, isUserLoggedIn }) => {
     const [userName, setUserName] = useState('')
+    const [status, setStatus] = useState('...')
+
+    useEffect(() => {
+        setStatus(isUserLoggedIn
+            ? `Successfully logged in as ${storedUserName}`
+            : '...')
+    }, [isUserLoggedIn, storedUserName])
 
     return (
         <DefaultPage isHome>
@@ -49,9 +56,9 @@ const SceneLogin = ({ login, storedUserName }) => {
                     />
                     <Button
                         title="LOGIN"
-                        onPress={() => login(userName)}
+                        onPress={() => login(userName || 'Anon')}
                     />
-                    <Text>{storedUserName}</Text>
+                    <Text>{status}</Text>
                 </View>
             </Panel>
         </DefaultPage>
@@ -60,6 +67,7 @@ const SceneLogin = ({ login, storedUserName }) => {
 
 const mapStateToProps = (state) => ({
     storedUserName: state.user.name,
+    isUserLoggedIn: state.user.isLoggedIn,
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -73,6 +81,7 @@ SceneLogin.defaultProps = {
 SceneLogin.propTypes = {
     login: PropTypes.func.isRequired,
     storedUserName: PropTypes.string,
+    isUserLoggedIn: PropTypes.bool.isRequired,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SceneLogin)
