@@ -3,6 +3,7 @@ import { Text, View, ActivityIndicator } from 'react-native'
 import { Image } from 'react-native-elements'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
+import BottomNavBar from '../components/BottomNavBar'
 import styles from '../styles'
 import highscores from '../../assets/demo/highscores.jpg'
 
@@ -20,6 +21,7 @@ const SceneGameRanking = () => (
                 />
             </View>
         </Panel>
+        <BottomNavBar />
     </DefaultPage>
 )
 

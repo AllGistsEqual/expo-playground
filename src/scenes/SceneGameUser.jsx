@@ -4,6 +4,7 @@ import { Avatar, Button } from 'react-native-elements'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
+import BottomNavBar from '../components/BottomNavBar'
 
 const SceneGameUser = () => (
     <DefaultPage isHome>
@@ -31,6 +32,7 @@ const SceneGameUser = () => (
                 />
             </View>
         </Panel>
+        <BottomNavBar />
     </DefaultPage>
 )
 

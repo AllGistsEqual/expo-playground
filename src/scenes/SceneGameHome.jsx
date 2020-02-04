@@ -7,6 +7,7 @@ import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 import game from '../../assets/demo/tictactoe.jpeg'
+import BottomNavBar from '../components/BottomNavBar'
 
 const SceneGameHome = ({ storedUserName }) => (
     <DefaultPage isHome>
@@ -25,6 +26,7 @@ const SceneGameHome = ({ storedUserName }) => (
                 </Text>
             </View>
         </Panel>
+        <BottomNavBar />
     </DefaultPage>
 )
 
