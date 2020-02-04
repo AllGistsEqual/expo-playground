@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, CheckBox, Input } from 'react-native-elements'
@@ -9,7 +9,10 @@ import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 
-const SceneLogin = ({ login, storedUserName }) => (
+const SceneLogin = ({ login, storedUserName }) => {
+    const [userName, setUserName] = useState('')
+
+    return (
     <DefaultPage isHome>
         <Panel>
             <View style={styles.headerPanel}>
@@ -18,6 +21,8 @@ const SceneLogin = ({ login, storedUserName }) => (
             <View style={styles.headerPanel}>
                 <Input
                     placeholder="USER NAME OR EMAIL"
+                    onChangeText={(text) => setUserName(text)}
+                    value={userName}
                     leftIcon={(
                         <Icon
                             name="user"
@@ -44,13 +49,14 @@ const SceneLogin = ({ login, storedUserName }) => (
                 />
                 <Button
                     title="LOGIN"
-                    onPress={() => login('???')}
+                    onPress={() => login(userName)}
                 />
                 <Text>{storedUserName}</Text>
             </View>
         </Panel>
     </DefaultPage>
-)
+    )
+}
 
 const mapStateToProps = (state) => ({
     storedUserName: state.user.name,
