@@ -4,11 +4,13 @@ import { Image } from 'react-native-elements'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import BottomNavBar from '../components/BottomNavBar'
+import TopUserBar from '../components/TopUserBar'
 import styles from '../styles'
 import highscores from '../../assets/demo/highscores.jpg'
 
 const SceneGameRanking = () => (
     <DefaultPage isHome>
+        <TopUserBar />
         <Panel>
             <View style={styles.headerPanel}>
                 <Text style={styles.headline}>Ranking Page</Text>

@@ -8,9 +8,11 @@ import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 import game from '../../assets/demo/tictactoe.jpeg'
 import BottomNavBar from '../components/BottomNavBar'
+import TopUserBar from '../components/TopUserBar'
 
 const SceneGameHome = ({ storedUserName }) => (
     <DefaultPage isHome>
+        <TopUserBar />
         <Panel>
             <View style={styles.headerPanel}>
                 <Text style={styles.headline}>PLAY TIME!</Text>

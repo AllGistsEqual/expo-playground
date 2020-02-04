@@ -5,9 +5,11 @@ import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 import BottomNavBar from '../components/BottomNavBar'
+import TopUserBar from '../components/TopUserBar'
 
 const SceneGameUser = () => (
     <DefaultPage isHome>
+        <TopUserBar />
         <Panel>
             <View style={styles.headerPanel}>
                 <Text style={styles.headline}>USER SETTINGS!</Text>
