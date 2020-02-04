@@ -40,7 +40,7 @@ const SceneLogin = () => (
                     checked={false}
                 />
                 <Button
-                    title="GO GO GO"
+                    title="LOGIN"
                 />
             </View>
         </Panel>
