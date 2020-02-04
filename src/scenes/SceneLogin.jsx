@@ -9,7 +9,12 @@ import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 
-const SceneLogin = ({ login, storedUserName, isUserLoggedIn }) => {
+const SceneLogin = ({
+    login,
+    storedUserName,
+    isUserLoggedIn,
+    navigation,
+}) => {
     const [userName, setUserName] = useState('')
     const [status, setStatus] = useState('...')
 
@@ -17,6 +22,11 @@ const SceneLogin = ({ login, storedUserName, isUserLoggedIn }) => {
         setStatus(isUserLoggedIn
             ? `Successfully logged in as ${storedUserName}`
             : '...')
+        if (isUserLoggedIn) {
+            setTimeout(() => {
+                navigation.navigate('App')
+            }, 3000)
+        }
     }, [isUserLoggedIn, storedUserName])
 
     return (
@@ -82,6 +92,9 @@ SceneLogin.propTypes = {
     login: PropTypes.func.isRequired,
     storedUserName: PropTypes.string,
     isUserLoggedIn: PropTypes.bool.isRequired,
+    navigation: PropTypes.shape({
+        navigate: PropTypes.func.isRequired,
+    }).isRequired,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SceneLogin)

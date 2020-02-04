@@ -1,12 +1,14 @@
 import React from 'react'
 import { Text, View, ActivityIndicator } from 'react-native'
 import { Image } from 'react-native-elements'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
 import game from '../../assets/demo/tictactoe.jpeg'
 
-const SceneGameHome = () => (
+const SceneGameHome = ({ storedUserName }) => (
     <DefaultPage isHome>
         <Panel>
             <View style={styles.headerPanel}>
@@ -19,11 +21,19 @@ const SceneGameHome = () => (
                     PlaceholderContent={<ActivityIndicator />}
                 />
                 <Text>
-                    Let&apos;s play a game!
+                    {`Let's play a game, ${storedUserName}!`}
                 </Text>
             </View>
         </Panel>
     </DefaultPage>
 )
 
-export default SceneGameHome
+const mapStateToProps = (state) => ({
+    storedUserName: state.user.name,
+})
+
+SceneGameHome.propTypes = {
+    storedUserName: PropTypes.string.isRequired,
+}
+
+export default connect(mapStateToProps)(SceneGameHome)
