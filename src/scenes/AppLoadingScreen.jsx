@@ -1,10 +1,17 @@
 import React from 'react'
 import { Text, View, TouchableWithoutFeedback } from 'react-native'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import styles from '../styles'
 
-const AppLoadingScreen = ({ navigation }) => (
-    <TouchableWithoutFeedback onPress={() => navigation.navigate('App')}>
+const handleClick = (isUserLoggedIn, navigation) => (
+    isUserLoggedIn
+        ? navigation.navigate('App')
+        : navigation.navigate('Login')
+)
+
+const AppLoadingScreen = ({ navigation, isUserLoggedIn }) => (
+    <TouchableWithoutFeedback onPress={() => handleClick(isUserLoggedIn, navigation)}>
         <View style={styles.page}>
             <View style={styles.titleBox}>
                 <Text>ALL BITS EQUAL</Text>
@@ -21,10 +28,15 @@ const AppLoadingScreen = ({ navigation }) => (
     </TouchableWithoutFeedback>
 )
 
+const mapStateToProps = (state) => ({
+    isUserLoggedIn: state.user.isLoggedIn,
+})
+
 AppLoadingScreen.propTypes = {
     navigation: PropTypes.shape({
         navigate: PropTypes.func.isRequired,
     }).isRequired,
+    isUserLoggedIn: PropTypes.bool.isRequired,
 }
 
-export default AppLoadingScreen
+export default connect(mapStateToProps)(AppLoadingScreen)
