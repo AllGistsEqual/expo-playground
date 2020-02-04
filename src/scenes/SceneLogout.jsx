@@ -3,7 +3,7 @@ import { Text, View } from 'react-native'
 import { Button } from 'react-native-elements'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { userLogin, userLogout } from '../redux/actions/user.actions'
+import { userLogout } from '../redux/actions/user.actions'
 import Panel from '../components/Panel'
 import DefaultPage from '../components/DefaultPage'
 import styles from '../styles'
@@ -19,8 +19,8 @@ const SceneLogOut = ({ navigation, logout }) => {
                 </View>
                 <View style={styles.headerPanel}>
                     <Text>
-                        We are sad to see you go but should you want to return, we&apos;re gonna leave
-                        a light on for you, UK.
+                        We are sad to see you go but should you want to return, we&apos;re gonna
+                        leave a light on for you, UK.
                     </Text>
                     <Button
                         title="SIGN ME IN AGAIN"
